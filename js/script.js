@@ -1,4 +1,4 @@
-// Create variable array to store quotes, source, citation, year, and tag
+// Created an array to store quotes, source, citation, year, and tag
 
 let quotes = [
   {
