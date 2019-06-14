@@ -86,21 +86,7 @@ const printQuote = () => {
   document.getElementById("quote-box").innerHTML = myHtml;
 };
 
-// Set interval to refresh page after 5 seconds:
-
-// const myInterval = () => setInterval(printQuote, 5000);
-// myInterval();
-
-// Function that generates random rgb value
-
-// function randomColorGenerator() {
-//   var randomColor;
-//   red = Math.floor(Math.random() * 256);
-//   green = Math.floor(Math.random() * 256);
-//   blue = Math.floor(Math.random() * 256);
-//   randomColor = "rgb(" + red + "," + green + "," + blue + ")";
-//   return randomColor;
-// }
+// Guidance on background color functions from https://github.com/tydillon/RandomQuoteGenerator
 
 // Function that changes background & button color
 let getRandomColor = () => {
@@ -113,19 +99,16 @@ let getRandomColor = () => {
   document.getElementById("loadQuote").style.backgroundColor = color;
 };
 
-// // Generate random color
-// randomColorGenerator();
-
-// //Update background with random color
-// document.getElementById(
-//   "background-color"
-// ).style.backgroundColor = randomColorGenerator();
-
 // Calls quote and color functions at the same time
 let quoteAndColor = () => {
   getRandomColor();
   printQuote();
 };
+
+// Set interval to refresh page after 5 seconds:
+
+const myInterval = () => setInterval(quoteAndColor, 5000);
+myInterval();
 
 // Event listener responds to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called:
