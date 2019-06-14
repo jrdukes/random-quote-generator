@@ -105,13 +105,12 @@ let quoteAndColor = () => {
   printQuote();
 };
 
-// Set interval to refresh page after 5 seconds:
+// Set interval to refresh page after 15 seconds:
 
-const myInterval = () => setInterval(quoteAndColor, 5000);
+const myInterval = () => setInterval(quoteAndColor, 15000);
 myInterval();
 
-// Event listener responds to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "printQuote" function is called:
+// Event listener responds to "loadQuote" button. When clicked, the "quoteAndColor" function is called.
 
 document
   .getElementById("loadQuote")
