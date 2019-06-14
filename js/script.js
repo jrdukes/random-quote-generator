@@ -41,13 +41,22 @@ let quotes = [
   }
 ];
 
-// Function that pulls a random object from quotes array and store in variable storeRandomQuote
+// Function that pulls a random object from quotes array and stores in variable storeRandomQuote
 
 const getRandomQuote = myArray => {
   var storeRandomQuote;
   storeRandomQuote = Math.floor(Math.random() * myArray.length);
   return myArray[storeRandomQuote];
 };
+
+function randomColorGenerator() {
+  var randomColor;
+  red = Math.floor(Math.random() * 256);
+  green = Math.floor(Math.random() * 256);
+  blue = Math.floor(Math.random() * 256);
+  randomColor = "rgb(" + red + "," + green + "," + blue + ")";
+  return randomColor;
+}
 
 // Function that takes previously selected random quote from array and prints to screen
 
@@ -79,31 +88,48 @@ const printQuote = () => {
 
 // Set interval to refresh page after 5 seconds:
 
-const myInterval = () => setInterval(printQuote, 5000);
-myInterval();
+// const myInterval = () => setInterval(printQuote, 5000);
+// myInterval();
 
-// Event listener respond to "Show another quote" button clicks
+// Function that generates random rgb value
+
+// function randomColorGenerator() {
+//   var randomColor;
+//   red = Math.floor(Math.random() * 256);
+//   green = Math.floor(Math.random() * 256);
+//   blue = Math.floor(Math.random() * 256);
+//   randomColor = "rgb(" + red + "," + green + "," + blue + ")";
+//   return randomColor;
+// }
+
+// Function that changes background & button color
+let getRandomColor = () => {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * letters.length)];
+  }
+  document.body.style.backgroundColor = color;
+  document.getElementById("loadQuote").style.backgroundColor = color;
+};
+
+// // Generate random color
+// randomColorGenerator();
+
+// //Update background with random color
+// document.getElementById(
+//   "background-color"
+// ).style.backgroundColor = randomColorGenerator();
+
+// Calls quote and color functions at the same time
+let quoteAndColor = () => {
+  getRandomColor();
+  printQuote();
+};
+
+// Event listener responds to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called:
 
 document
   .getElementById("loadQuote")
-  .addEventListener("click", printQuote, false);
-
-// Function that generates random rgb value
-
-function randomColorGenerator() {
-  var randomColor;
-  red = Math.floor(Math.random() * 256);
-  green = Math.floor(Math.random() * 256);
-  blue = Math.floor(Math.random() * 256);
-  randomColor = "rgb(" + red + "," + green + "," + blue + ")";
-  return randomColor;
-}
-
-// Generate random color
-randomColorGenerator();
-
-//Update background with random color
-document.getElementById(
-  "background-color"
-).style.backgroundColor = randomColorGenerator();
+  .addEventListener("click", quoteAndColor, false);
