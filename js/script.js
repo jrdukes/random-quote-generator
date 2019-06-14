@@ -105,5 +105,5 @@ randomColorGenerator();
 
 //Update background with random color
 document.getElementById(
-  "bgcolor"
+  "background-color"
 ).style.backgroundColor = randomColorGenerator();
