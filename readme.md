@@ -32,4 +32,4 @@ Each quote should have the following properties:
 
 ## View Project
 
-View [Live Demo](https://jrdukes.github.io/random-quote-generator/)
+View live demo of project [here.](https://jrdukes.github.io/random-quote-generator/)
