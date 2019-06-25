@@ -1,7 +1,7 @@
 # Random Quote Generator
 
 
-# Project Requirements
+## Project Requirements: 
 
 ## Create an array of JS objects to hold the data for the quotes.
 
