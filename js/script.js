@@ -4,40 +4,40 @@ let quotes = [
   {
     quote:
       "Someone's sitting in the shade today because someone planted a tree a long time ago.",
-    source: "Warren Buffett",
-    citation: "Of Permanent Value: The Story of Warren Buffett",
-    year: "2007",
-    tag: "Category: Business"
+    source: 'Warren Buffett',
+    citation: 'Of Permanent Value: The Story of Warren Buffett',
+    year: '2007',
+    tag: 'Category: Business'
   },
 
   {
     quote:
       "Technology is cool, but you've got to use it as opposed to letting it use you.",
-    source: "Prince",
-    citation: "Today",
-    year: "2004",
-    tag: "Category: Technology"
+    source: 'Prince',
+    citation: 'Today',
+    year: '2004',
+    tag: 'Category: Technology'
   },
 
   {
     quote:
-      "Information technology is at the core of how you do your business and how your business model itself evolves.",
-    source: "Satya Nadella",
-    tag: "Category: Technology"
+      'Information technology is at the core of how you do your business and how your business model itself evolves.',
+    source: 'Satya Nadella',
+    tag: 'Category: Technology'
   },
 
   {
     quote:
-      "Design is not just what it looks like and feels like. Design is how it works.",
-    source: "Steve Jobs",
-    tag: "Category: Technology"
+      'Design is not just what it looks like and feels like. Design is how it works.',
+    source: 'Steve Jobs',
+    tag: 'Category: Technology'
   },
 
   {
     quote:
       "The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life.",
-    source: "Bill Gates",
-    tag: "Category: Technology"
+    source: 'Bill Gates',
+    tag: 'Category: Technology'
   }
 ];
 
@@ -54,7 +54,7 @@ function randomColorGenerator() {
   red = Math.floor(Math.random() * 256);
   green = Math.floor(Math.random() * 256);
   blue = Math.floor(Math.random() * 256);
-  randomColor = "rgb(" + red + "," + green + "," + blue + ")";
+  randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
   return randomColor;
 }
 
@@ -62,7 +62,7 @@ function randomColorGenerator() {
 
 const printQuote = () => {
   var getQuotes = getRandomQuote(quotes);
-  var myHtml = "";
+  var myHtml = '';
   myHtml = `<p class = "quote">${getQuotes.quote}</p><p class = "source">${
     getQuotes.source
   }`;
@@ -83,20 +83,20 @@ const printQuote = () => {
   myHtml = `${myHtml}</p>`;
 
   // Put myHtml on page:
-  document.getElementById("quote-box").innerHTML = myHtml;
+  document.getElementById('quote-box').innerHTML = myHtml;
 };
 
-// Guidance on background color functions from https://github.com/tydillon/RandomQuoteGenerator
+// Guidance on background color functions from Tyler Dillon's repo at https://github.com/tydillon/RandomQuoteGenerator
 
 // Function that changes background & button color
 let getRandomColor = () => {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
+  var letters = '0123456789ABCDEF';
+  var color = '#';
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * letters.length)];
   }
   document.body.style.backgroundColor = color;
-  document.getElementById("loadQuote").style.backgroundColor = color;
+  document.getElementById('loadQuote').style.backgroundColor = color;
 };
 
 // Calls quote and color functions at the same time
@@ -113,5 +113,5 @@ myInterval();
 // Event listener responds to "loadQuote" button. When clicked, the "quoteAndColor" function is called.
 
 document
-  .getElementById("loadQuote")
-  .addEventListener("click", quoteAndColor, false);
+  .getElementById('loadQuote')
+  .addEventListener('click', quoteAndColor, false);
