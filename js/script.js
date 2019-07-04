@@ -105,7 +105,7 @@ let quoteAndColor = () => {
   printQuote();
 };
 
-// Set interval to refresh page after 15 seconds:
+// Set interval to refresh page after 7 seconds:
 
 const myInterval = () => setInterval(quoteAndColor, 7000);
 myInterval();
