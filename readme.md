@@ -3,7 +3,7 @@
 
 ## Project Requirements: 
 
-## Create an array of JS objects to hold the data for the quotes.
+## Create an array of JS objects to hold data for quotes.
 
 Each quote should have the following properties:
 

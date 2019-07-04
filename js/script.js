@@ -41,7 +41,7 @@ let quotes = [
   }
 ];
 
-// Function that pulls a random object from quotes array and stores in variable storeRandomQuote
+// Created function that pulls a random object from quotes array and stores in variable storeRandomQuote
 
 const getRandomQuote = myArray => {
   var storeRandomQuote;
@@ -82,7 +82,7 @@ const printQuote = () => {
   // Append closing p tag:
   myHtml = `${myHtml}</p>`;
 
-  // Put myHtml on page:
+  // Send myHtml to page:
   document.getElementById('quote-box').innerHTML = myHtml;
 };
 
