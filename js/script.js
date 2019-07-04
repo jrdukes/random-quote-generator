@@ -107,7 +107,7 @@ let quoteAndColor = () => {
 
 // Set interval to refresh page after 15 seconds:
 
-const myInterval = () => setInterval(quoteAndColor, 10000);
+const myInterval = () => setInterval(quoteAndColor, 7000);
 myInterval();
 
 // Event listener responds to "loadQuote" button. When clicked, the "quoteAndColor" function is called.
